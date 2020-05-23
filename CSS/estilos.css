@@ -1,0 +1,132 @@
+/* reset do CSS*/
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+    background-image: url('../IMG/fundo.jpg');
+    background-size: auto 100vh;
+    font-family: 'Bangers', cursive;
+    height: 100vh;
+    font-size: 12px;
+  }
+
+  /* "breakpoint" se a tela tiver pelo menos 400px vai carregar */
+  @media (min-width: 400px){
+    body{
+      font-size: 14px;
+    }
+  }
+
+  /* "breakpoint" se a tela tiver pelo menos 600px vai carregar */
+  @media (min-width: 600px){
+    body{
+      font-size: 18px;
+    }
+  }
+    /* "breakpoint" se a tela tiver pelo menos 1200px vai carregar */
+    @media (min-width: 1200px) {
+      body {
+        font-size: 20px;
+      }
+  }
+  
+header{
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+
+  .menu{
+    background-color: DeepSkyBlue;
+    position: fixed;
+    top: 0px;
+    width: 100vw;
+    top: 0;
+  }
+  
+  .menu ul{
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .menu li{
+    list-style: none;
+    font-family: 'Press Start 2P', cursive;
+  }
+
+  .menu a{
+    display: block;
+    padding: 10px 20px;
+  }
+  
+  a{
+    color: yellow;
+    text-decoration: none;
+  }
+  
+  a:hover{
+    text-decoration: underline;
+  }
+  
+  .site-title, 
+  .site-subtitle{
+    color: yellow;
+    text-align: center;  
+  }
+
+  .site-title{
+    font-size: 4em;
+    font-family: 'VT323', monospace;
+  }
+  
+  .site-subtitle{
+    font-family: 'Major Mono Display', monospace;
+    line-height: 1.8em;
+  }
+
+  .portfolio{
+    padding: 2em;
+    height: 100vh; 
+  }
+
+  .portfolio h2{
+    font-family: 'Major Mono Display', monospace;
+    color: yellow;
+    margin-bottom: 1.5em;
+    font-size: 2em;
+  }
+
+  .portfolio .grid{
+    display: grid;
+    gap: 2em;
+  }
+
+  @media(min-width: 560px){
+    .portfolio .grid{
+    grid-template-columns: 240px 240px; 
+  }
+}
+
+@media(min-width: 880px){
+  .portfolio .grid{
+  grid-template-columns: repeat(3, 260px);
+  align-content: center;
+  justify-content: center;
+  height: calc(100vh - 48px - 8em);
+  }
+}
+
+  .portfolio figure{
+    text-align: center;
+  }
+  
+  .img-portfolio{
+    height: 180px;
+    width: 240px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 5px;
+  }
